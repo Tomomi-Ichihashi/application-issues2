@@ -7,6 +7,18 @@ class UsersController < ApplicationController
     @books = @user.books
     @book = Book.new
   end
+  
+  # フォロー・フォロワー機能 #
+  def follows
+    user = User.find(params[:id])
+    @users = user.followings
+  end
+  
+  def followers
+    user = User.find(params[:id])
+    @users = user.followers
+  end
+  # フォロー・フォロワー機能 #
 
   def index
     @users = User.all
