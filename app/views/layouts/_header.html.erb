@@ -22,9 +22,10 @@
       </div>
     </div>
   </nav>
+
   <!--検索機能-->
   <div class="container">
-    <div class="col-lg-6 text-center">
+    <div class="col-xs-6 col-xs-offset-3 text-center" style="margin-top: 10px">
       <% if user_signed_in? %>
        <%= form_with url:search_path, method: :get, local: true do |f| %>
        <%= f.text_field 'search[value]' %>
