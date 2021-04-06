@@ -16,15 +16,14 @@
         </td>
         <td><%= link_to book.title, book_path(book), class: "book_#{book.id}" %></td>
         <td><%= book.body %></td>
-        
+        <!--いいね機能非同期-->
         <td class="favorites_buttons_<%= book.id %>">
       　　<%= render 'favorites/favorite', book: book %>
         </td>
-          
+          <!--いいね機能非同期-->
         <td>
           <%= link_to "#{book.book_comments.count}コメント",book_path(book.id) %>
         </td>
-        
       </tr>
     <% end %>
   </tbody>
